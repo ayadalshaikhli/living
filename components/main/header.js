@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  
   return (
     <header style={{
      
@@ -21,7 +22,7 @@ export default function Header() {
           /> */}
 
           <Link href="/">
-            <a className="text-lg md:text-3xl font-thin ml-3 text-black">
+            <a className="text-lg md:text-3xl font-thin ml-3 text-gray-800">
               Living Mosaic
             </a>
           </Link>
@@ -43,7 +44,7 @@ export default function Header() {
 
         <ul
           className={cn(
-            "md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto",
+            "md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto ",
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
@@ -51,9 +52,9 @@ export default function Header() {
             { title: "Home", route: "/" },
             { title: "About", route: "/about" },
           ].map(({ route, title }) => (
-            <li className="mt-3 md:mt-0 md:ml-6" key={title}>
+            <li className="mt-3 md:mt-0 md:ml-6 " key={title}>
               <Link href={route}>
-                <a className="block text-white">{title}</a>
+                <a className="block text-gray-900">{title}</a>
               </Link>
             </li>
           ))}

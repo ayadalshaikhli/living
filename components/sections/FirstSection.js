@@ -8,15 +8,16 @@ function FirstSection() {
         width: "100%",
         position: "relative",
         backgroundColor: "#D0D0D0",
+        zIndex: "-2",
       }}
-      className=" text-6xl mark"
+      className=" text-6xl "
     >
       <div
         style={{
           position: "relative",
           height: "20vh",
         }}
-        className="mark mt-32"
+        className=" mt-32"
       >
         hello
       </div>

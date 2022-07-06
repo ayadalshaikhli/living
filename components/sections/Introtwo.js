@@ -1,20 +1,30 @@
 import React from "react";
 import Image from "next/image";
-import { gsap, Expo } from "gsap/dist/gsap";
+import { gsap, Expo, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import cover from "../../public/zaha.jpg";
+
+import cover from "../../public/bb.jpg";
+
 function Introtwo() {
+  const tl = new gsap.timeline();
   React.useEffect(() => {
-    gsap.to(".section-up", 3, {
+    gsap.to(".section-up", 2, {
       y: "-100%",
       display: "none",
-      delay: 5,
+      delay: 2,
       ease: Expo.easeOut,
     });
-    gsap.to(".white-down", 2, {
+    gsap.to(".white-down", 1, {
       y: "100%",
-      delay: 3,
+      delay: 1,
+
       display: "none",
+      ease: Expo.easeOut,
+    });
+    gsap.to(".text-mosaic", 1, {
+      y: "100px",
+      delay: 2,
+      stagger: 0.2,
       ease: Expo.easeOut,
     });
   }, []);
@@ -52,7 +62,15 @@ function Introtwo() {
           }}
           className=" text-9xl text-white flex flex-col gap-y-96  uppercase "
         >
-          <div>Living Mosaic</div>
+          <div>
+            Living
+            <span className="text-mosaic">M</span>
+            <span className="text-mosaic">o</span>
+            <span className="text-mosaic">s</span>
+            <span className="text-mosaic">a</span>
+            <span className="text-mosaic">i</span>
+            <span className="text-mosaic">c</span>
+          </div>
           <div>INNOVATION IN DESIGN</div>
         </div>
       </div>
@@ -66,7 +84,6 @@ function Introtwo() {
         }}
         className="bg-white white-down"
       >
-        White
         <div
           style={{
             position: "absolute",
@@ -77,8 +94,15 @@ function Introtwo() {
           }}
           className="  text-9xl text-black flex flex-col gap-y-96  uppercase "
         >
-          <div>Living Mosaic</div>
-          <div>INNOVATION IN DESIGN</div>
+          <div className="hidetext">
+            Living <span className="text-mosaic">M</span>
+            <span className="text-mosaic">o</span>
+            <span className="text-mosaic">s</span>
+            <span className="text-mosaic">a</span>
+            <span className="text-mosaic">i</span>
+            <span className="text-mosaic">c</span>
+          </div>
+          <div className="hidetext">INNOVATION IN DESIGN</div>
         </div>
       </div>
 
