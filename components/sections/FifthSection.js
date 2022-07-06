@@ -134,10 +134,10 @@ function FifthSection() {
         <Image className="smallimg2" src={img10} width={400} height={600} />
         <div className="img-scale2 text-sm w-96">
           We in Living Mosaic take care of the smallest details in the interior
-          design and we make sure it's implemented in the correct way because we
-          believe the creative design isn't enough but it should constructed
-          well to show its beauty and details and that's what we made sure to
-          apply in Al-Qadi's Villa.
+          design and we make sure its implemented in the correct way because we
+          believe the creative design isnt enough but it should constructed
+          well to show its beauty and details and thats what we made sure to
+          apply in Al-Qadis Villa.
         </div>
       </div>
     </section>
